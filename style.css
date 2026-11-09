@@ -1,0 +1,99 @@
+
+/* Barcha elementlar uchun umumiy sozlama */
+* {
+    margin: 0;                  /* Tashqi bo'shliqni olib tashlaydi */
+    padding: 0;                 /* Ichki bo'shliqni olib tashlaydi */
+    box-sizing: border-box;     /* O'lchamni hisoblashni osonlashtiradi  */
+}
+
+body {
+    background-color: #f1f1f1;      /* Orqa fon rangi */
+}
+
+/* Asosiy konteyner */
+.container {
+    width: 90%;                 /* Ekran kengligining 90 foizi */
+    margin: 40px auto;          /* Yuqoridan bo'shliq va markazga joylashish */
+
+    display: flex;              /* Elementlarni Flex orqali joylashtirish */
+    align-items: center;        /* Elementlarni vertikal markazlashtirish */
+    justify-content: space-between; /* Elementlar orasida bo'shliq */
+    gap: 20px;                  /* Boxlar orasidagi masofa */
+}
+
+/* Har bir box uchun */
+.box {
+    width: 50%;                 /* Konteyner kengligining 50 foizi */
+    background-color: white;    /* Oq fon */
+    padding: 15px;               /* Ichki bo'shliq */
+    border-radius: 10px;         /* Burchaklarni yumaloqlash */
+    text-align: center;         /* Matnni markazga joylash */
+}
+
+/* Rasmlar uchun */
+.box img {
+    width: 100%;                /* Box kengligiga moslashadi */
+    height: 220px;              /* Rasm balandligi */
+    object-fit: cover;          /* Rasmni buzmasdan joylashtirish */
+    border-radius: 8px;          /* Rasm burchaklari */
+}
+
+/* Sarlavha uchun */
+.box h2 {
+    font-size: 24px;           /* Nisbiy shrift o'lchami */
+    margin: 15px 0 10px;         /* Tashqi bo'shliq */
+}
+
+/* Oddiy matn uchun */
+.box p {
+    font-size: 16px;             /* Asosiy shrift o'lchami */
+    line-height: 1.5;             /* Qatorlar orasidagi masofa */
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        width: 95%;              /* Konteyner kengligini oshiramiz */
+        gap: 15px;               /* Boxlar orasidagi masofani kamaytiramiz */
+    }
+
+    .box img {
+        height: 180px;           /* Rasmlar balandligini kamaytiramiz */
+    }
+
+    .box h2 {
+        font-size: 19px;       /* Sarlavhani kichraytiramiz */
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        width: 90%;              /* Konteyner ekran kengligining 90 foizi */
+        flex-direction: column; /* Boxlarni ustma-ust joylashtiramiz */
+        gap: 20px;               /* Boxlar orasidagi masofa */
+    }
+
+    .box {
+        width: 100%;             /* Har bir box to'liq kenglikni egallaydi */
+    }
+
+    .box img {
+        height: 200px;           /* Telefon uchun rasm balandligi */
+    }
+
+    .box h2 {
+        font-size: 19px;       /* Sarlavha o'lchamini moslashtiramiz */
+    }
+
+    .box p {
+        font-size: 14px;       /* Matn o'lchamini kichraytiramiz */
+    }
+
+}
